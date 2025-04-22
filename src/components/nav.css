@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap');
+
+nav {
+  height: 10vh;
+  padding: 0 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(50deg, #080d16, #0a053d, #2b0b45);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1000;
+}
+
+.logo h3{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+}
+
+.nav_links li a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav_links li a:hover {
+  transform: translateY(-2px);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.hamburger > svg {
+  font-size: 24px;
+}
+
+/* Tablet and Mobile Styles */
+@media only screen and (max-width: 768px) {
+  .nav_links {
+    position: fixed;
+    top: 10vh;
+    right: -100%;
+    width: 70%;
+    height: 90vh;
+    background: rgba(10, 0, 22, 0.95);
+    transition: right 0.3s ease-in-out;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav_links.active {
+    right: 0;
+  }
+
+  .nav_links li {
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Small Mobile Styles */
+@media only screen and (max-width: 480px) {
+  .nav_links {
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+  
