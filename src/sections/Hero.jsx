@@ -1,4 +1,3 @@
-import React from "react";
 import "./hero.css";
 import "../utility.css";
 import { FaPaperclip } from "react-icons/fa";
@@ -15,12 +14,20 @@ const Hero = () => {
     delaySpeed: 1500,
   });
 
+  const scrollToService = (e) => {
+    e.preventDefault();
+    const serviceSection = document.getElementById('skills');
+    if (serviceSection) {
+      serviceSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="hero flex_box justify_between align_center">
+    <section className="hero flex_box justify_between align_center" id="hero">
       <div className="hero_left">
         <h2>
           Hello,
-          <br /> I'm <span>{text}</span>
+          <br />I'm <span>{text}</span>
           <Cursor cursorStyle="_" />
         </h2>
         <p>
@@ -41,14 +48,15 @@ const Hero = () => {
             </Link>
           </button>
           <button className="mx-16">Contact</button>
-          <div className="hire">
+          {/* <div className="hire">
             <Link to="">Hire Me</Link>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="hero_right">
         <CanvasModel/>
       </div>
+      <div className="scroll_down" onClick={scrollToService}></div>
     </section>
   );
 };

@@ -10,6 +10,9 @@
   .justify_between {
     justify-content: space-between;
   }
+  .justify_center{
+    justify-content: center;
+  }
   .align_center {
     align-items: center;
   }
@@ -56,4 +59,7 @@
   .mx-16{
     margin:0 16px;
   }
- 
+
+ .flex_wrap{
+  flex-wrap: wrap;
+ }

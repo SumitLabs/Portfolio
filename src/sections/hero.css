@@ -1,10 +1,10 @@
 .hero {
-  min-height: 80vh;
+  height: 80vh;
+  position: relative;
 }
 
 .hero_left {
   width: 55%;
-  /* background-color: #2e1e90; */
 }
 
 .hero_left h2 {
@@ -57,31 +57,79 @@
   box-shadow: 1px 1px 1px #51329e;
 }
 
+.scroll_down{
+  height: 50px;
+  width: 30px;
+  border: 2px solid lightgray;
+  position: absolute;
+  left: 48.5%;
+  bottom: 5%;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll_down::before,
+.scroll_down::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 49%;
+  height: 10px;
+  width: 10px;
+  border: 2px solid lightgray;
+  transform: translate(-50%,-100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 2s ease-in-out infinite;
+
+}
+.scroll_down::before{
+  top: 30%;
+  animation-delay: 0.5s;
+}
+@keyframes scroll_down{
+0%{
+  opacity: 0;
+}
+30%,60%{
+opacity: 1;
+}
+100%{
+  top: 90%;
+  opacity: 0;
+}
+}
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .hero {
     flex-direction: column;
+    margin-top: 55px;
+    height: 150vh;
+    justify-content: center;
   }
-
+  .scroll_down{
+    border: 3px solid #51329e;
+  }
   .hero_left {
     width: 100%;
     padding-right: 0;
-    margin-bottom: 40px;
+  }
+  .hero_left h2 {
+    font-size: 2.2rem;
   }
 
   .hero_right {
     width: 100%;
-    
-  
-  }
-
-  .hero_left h2 {
-    font-size: 2.5rem;
+    height: 330px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width:425px) {
+  .hero_left{
+    position: relative;
+    margin-top: 50%;
+  }
   .hero_left h2 {
-    font-size: 2rem;
+    position: absolute;
+    bottom: 100%;
   }
 }

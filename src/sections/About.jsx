@@ -1,10 +1,15 @@
-import React from 'react'
-
+import Title from "../components/Title";
+import './about.css'
 const About = () => {
   return (
-    // <div>About</div>
-    <>
-    </>
+    <section id="about">
+    <Title
+        title="About Me"
+        des="When you give joy to other people, you get more joy in return. You should give a good thought to the happiness that you can give out."
+      />
+
+      
+      </section>
   )
 }
 

@@ -1,0 +1,31 @@
+.title{
+padding: 10px 0;
+}
+.title h2{
+    text-align: center;
+    margin: 12px 0;
+    position: relative;
+  
+}
+.title h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #51329e;
+    margin: 8px auto 0 auto; 
+    border-radius: 2px;
+}
+
+.title p{
+    margin: auto;
+    width: 40%;
+    text-align: center;
+}
+@media only screen and (max-width: 768px){
+    .title p{
+        margin: auto;
+        width: 80%;
+        text-align: center;
+    }   
+}

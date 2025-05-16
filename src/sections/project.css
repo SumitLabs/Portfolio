@@ -1,0 +1,46 @@
+
+.project_card{
+    background-color:#090122;
+    width: 308px;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 12px auto;
+    border: 2px solid #250f68;
+    position: relative;
+}
+.img{
+    height: 150px;
+}
+.img>img{
+   height: 100%;
+   width: 100%; 
+}
+.info h3{
+    margin: 6px 0;
+    font-size: 1rem;
+}
+.info>p{
+    margin: 23px 0;
+    font-size: .7rem;
+}
+.project_tech>ul>li{
+  border: 1px solid #fcfbff;
+  border-radius: 16px;
+  padding:0 7px;
+  margin-right:3px;
+  font-size: .8rem;
+  
+}
+.url {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    left: 0;
+    height: 24px;
+    text-align: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #1c1f2b;
+    cursor: pointer;
+    padding:4px 12px;
+}

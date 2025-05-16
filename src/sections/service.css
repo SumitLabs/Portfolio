@@ -1,0 +1,85 @@
+
+.service_section {
+margin: 80px 0;
+
+}
+.service_list li {
+  font-size: 3.4rem;
+  line-height: 60px;
+  margin: 12px 0;
+  color: transparent;
+  position: relative;
+  -webkit-text-stroke: 1.6px #ecabe2;
+  text-shadow: 0 0 20px #d917d6, 0 0 40px #3c22d1;
+}
+ .right_service_section{
+   margin: auto;
+  }
+  
+  .service_card{
+    padding: 2em;
+    width: 200px;
+    height: 200px;
+    background: #1c1f2b;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    
+  }
+  .service_card> span{
+    font-size: 2.8rem;
+  }
+  .service_card p{
+    margin: 6px 0;
+    font-size: .8rem;
+  }
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  .service_card::after,.service_card::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70% ,#00ff99,#006aff,#ff0095);
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 10px;
+    padding: 3px;
+    animation:15s spin linear infinite;
+  }
+  @keyframes spin{
+    from{
+--angle: 0deg;
+    }
+    to{
+--angle: 360deg;
+    }
+  }
+ .service_card::before {
+ filter: blur(1.5rem);
+ opacity: 0.5;
+  }
+@media only screen and (max-width: 768px) {
+  .service_section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .service_list li {
+    font-size: 2.8rem;
+    line-height: 45px;
+    margin: 12px 0;
+  }
+  .right_service_section{
+   margin: 40px auto;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .service_list li {
+    font-size: 3rem;
+  }
+}

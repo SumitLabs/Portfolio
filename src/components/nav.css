@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap'); */
 
 nav {
   height: 10vh;
@@ -21,7 +21,7 @@ nav.scrolled {
 }
 
 .logo h3{
-  font-family: "Ubuntu", sans-serif;
+  /* font-family: "Ubuntu", sans-serif; */
   font-weight: 400;
   font-style: italic;
   font-size: 1rem;
@@ -46,10 +46,10 @@ nav.scrolled {
 @media only screen and (max-width: 768px) {
   .nav_links {
     position: fixed;
-    top: 10vh;
+    top: 7%;
     right: -100%;
     width: 70%;
-    height: 90vh;
+    height: 100%;
     background: rgba(10, 0, 22, 0.95);
     transition: right 0.3s ease-in-out;
     flex-direction: column;
@@ -78,7 +78,9 @@ nav.scrolled {
   .nav_links {
     width: 100%;
   }
-
+.hire_btn{
+  display: none;
+}
   .logo h3{
     font-size: .8rem;
   }

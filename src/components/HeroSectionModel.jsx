@@ -13,12 +13,9 @@ const HeroSectionModel = () => {
     <group>
       <primitive 
         object={scene} 
-        scale={0.17}
-        position={[0.27, -0.1, 0]}
+        scale={0.101}
+        position={[0.27, 0.3, 0]}
         rotation={[0, -Math.PI / 4, 0]}
-
-        enableZoom={true}
-        enablePan={true}
         enableRotate={true}
       />
     </group>
